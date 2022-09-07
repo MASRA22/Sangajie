@@ -104,7 +104,7 @@
                 top: 0;
                 bottom: 0;
                 right: 0;
-                /* left: 0; */
+                left: 100%;
                 padding: 100px 0;
                 background: #efe9da;
             }
@@ -202,9 +202,9 @@
     <script>
         function menu(){
             if(document.getElementById('menu').checked){
-                document.getElementById('navigasimenu').style.left= "100%";
-            } else {
                 document.getElementById('navigasimenu').style.left= "0";
+            } else {
+                document.getElementById('navigasimenu').style.left= "100%";
             }
         }
     </script>
