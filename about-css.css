@@ -42,8 +42,6 @@ a {
     position: absolute;
     height: 100%;
     width: 100%;
-    /* z-index: ; */
-    /* top:10px;  */
 }
 .content-about-body > div:nth-child(1)::after {
     
