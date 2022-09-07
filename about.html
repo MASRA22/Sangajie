@@ -37,14 +37,39 @@
             justify-content: space-between;
             overflow: auto;
         }
-        
-        
+        /* scroll */
+        /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  margin-top: 80px;
+  padding: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #393838; 
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #393831;
+    cursor: pointer;
+}
         /* Navigasi */
         .navigasi{
             left: 0;
             padding: 0 150px;
             z-index: 10;
             transition: .5s;
+            background: #efe9da;
         }
         .navigasi > div {
             display: flex;
@@ -111,7 +136,6 @@
             .navigasi > div > div:nth-child(3) {
                 display: flex;
                 flex-direction: column;
-                border: 1px solid black;
                 width: 50px;
                 height: 50px;
                 margin-top: 10px;
@@ -134,7 +158,8 @@
             .navigasi > div > div:nth-child(3) > input {
                 width: 50px;
                 height: 50px;
-                opacity: .5;
+                opacity: 0;
+                border: none;
                 position: absolute;
                 cursor: pointer;
             }
