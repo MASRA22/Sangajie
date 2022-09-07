@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About-MAS</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="about-css.css">
+    <link rel="stylesheet" href="footer-css.css">
     <script src="https://kit.fontawesome.com/b434fcfa0e.js" crossorigin="anonymous"></script>
     <style>
         /* warna
@@ -30,115 +32,20 @@
             max-width: 1600px;
             margin: 0px auto;
             padding: 0 150px;
-            /* z-index: 1; */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             overflow: auto;
         }
-        a {
-            color: #393838;
-            text-decoration: none;
-            font-family: 'Concert One', cursive;
-        }
-        #contact{
-            background-color: #393838;
-            color:#efe9da;
-            padding: 12px 0px;
-            box-shadow: 10px 10px 5px #7c7c74;
-        }
-        #contact:hover{
-            background-color: #7c7c74;
-            color:#efe9da;
-            box-shadow: 10px 10px 5px #393838;
-        }
-        
-        .content-about-title{
-            font-family: 'Concert One', cursive;
-            border-bottom: 2px dashed #7b7474;
-            width: 100%;
-        }
-        .content-about-title > h2 > span{
-            color:  #393838;
-        }
-        .content-about-body{
-            display: flex;
-            transition: 1s;
-        }
-        .content-about-body > div:nth-child(1){
-            height: 300px;
-            width: 300px;
-            position: relative;    
-            background-color: #97938a;
-        }
-        .content-about-body > div:nth-child(1)::before {
-            content:"";
-            display: block;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            /* z-index: ; */
-            /* top:10px;  */
-        }
-        .content-about-body > div:nth-child(1)::after {
-            
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-            border: 3px solid #97938a;
-            top: 20px;
-            left: 20px;
-            z-index: -1;
-            transition: .5s;
-        }
-        .content-about-body > div:nth-child(1):hover::after{
-            top: 10px;
-            left: 10px;
-            
-        }
-        .content-about-body > div:nth-child(1) > img{
-            object-fit: contain;
-            width: 300px;
-            z-index: 3;
-            transition:.5s;
-            mix-blend-mode: multiply;
-            filter: grayscale(100%) contrast(1);
-        }
-        .content-about-body > div:nth-child(1) > img:hover{
-            mix-blend-mode: normal;
-            filter: grayscale(0%) contrast(1);
-        }
-        .content-about-body > div:nth-child(2){
-            padding-left: 30px;
-            font-family: 'Concert One', cursive;
-        }
-        .content-about-body > div:nth-child(2) > div > h2{
-            color: #393838;
-        }
-        .content-about-body > div:nth-child(2) > div > p{
-            color: #7b7474;
-            text-align: justify;
-            line-height: 1.3;
-        }
-        .content-about-body > div:nth-child(2) > div > p:nth-child(2){
-            border-bottom: 3px solid #393838;
-        }
-        
-        /* Footer */
-        footer{
-            margin-top: 20px;
-        }
-        footer > p{
-            padding: 10px;
-            text-align: center;
-            font-family: 'Concert One', cursive;
-        }
         
         
         /* Navigasi */
+        .navigasi{
+            left: 0;
+            padding: 0 150px;
+            z-index: 10;
+            transition: .5s;
+        }
         .navigasi > div {
             display: flex;
             justify-content: space-between;
@@ -148,10 +55,10 @@
             font-weight: bolder;
             font-size: 40px;
             font-family: 'DynaPuff', cursive;
-            z-index: 99;
+            z-index: 11;
         }
         .navigasi > div > div:nth-child(2) {
-            transition: 1s;
+            transition: .5s;
             display: flex;
             align-items: center;
         }
@@ -160,23 +67,8 @@
         }
         .navigasi > div > div > a {
             font-size: 16px;
-            margin: 0 20px;
+            margin-left:30px;
             font-family: 'Concert One', cursive;
-        }
-        .navigasi > div > div:nth-child(3) > input {
-            width: 40px;
-            height: 40px;
-            opacity: .5;
-            position: absolute;
-            cursor: pointer;
-        }
-        .navigasi > div > div:nth-child(3) > input:hover ~ div:nth-child(4) {
-            width: 100%;   
-            opacity: 1;
-        }
-        .navigasi > div > div:nth-child(3) > input:hover ~ div:nth-child(3) {
-            width: 50%;   
-            opacity: 1;
         }
         .navigasi > div > div > a:hover {
             color:#393838;
@@ -187,75 +79,44 @@
             background-color: rgb(124, 124, 116, .2);
             color:#393838;
         }
-        .navigasi > div > aside {
-            display: none;
-        }
         @media only screen and (max-width: 1080px) {
             #wrapper{
-                padding: 0 80px;
+                padding: 0 50px;
             }
-            .content-about-body > div:nth-child(1){
-                margin-bottom: 30px;
+            .navigasi {
+                padding: 0 50px;
             }
-            .content-about-body{
-                flex-direction: column;
-                transition: .5s;
-                align-items: center;
-            }
-            .content-about-body > div:nth-child(2){
-                margin-top: 30px;
-                padding-left: 0;
-            }
-            .content-about-body > div:nth-child(2) > div > h2{
-                text-align: center;
-            }
-            .content-about-body > div:nth-child(2) > div > p{
-                text-align: center;
-                margin-bottom: 30px;
-            }
-            .navigasi > div > aside > div {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                border:1px solid black;
-                /* height: 100%; */
-            }
-            .navigasi > div > aside {
-                display: block;
-                position: fixed;
-                overflow: auto;
-                width: 100%;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                padding: 100px 10px;
-                height: 100vh;
-                outline: 0px;
-                background-color: #efe9da;
-                z-index: 9;
-                transform: translateX(0vw);
-            }
-            
         }
         @media only screen and (max-width: 768px) {
             #wrapper{
                 padding: 0 30px;
             }
-            .navigasi > div > div:nth-child(2) {
-                display: none;
+            .navigasi {
+                padding: 0 30px;
+            }
+            #navigasimenu{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                position: fixed;
+                overflow: auto;
+                /* border:5px solid black; */
+                top: 0;
+                bottom: 0;
+                right: 0;
+                /* left: 0; */
+                padding: 100px 0;
+                background: #efe9da;
             }
             .navigasi > div > div:nth-child(3) {
                 display: flex;
                 flex-direction: column;
-                /* border: 1px solid black; */
-                width: 60px;
-                height: 60px;
-                padding: 10px;
+                border: 1px solid black;
+                width: 50px;
+                height: 50px;
+                margin-top: 10px;
                 align-items: flex-end;
                 justify-content: space-around;
-                /* rotate: 180deg; */
             }
             .navigasi > div > div:nth-child(3) > div {
                 border: 2px solid black;
@@ -270,64 +131,51 @@
             .navigasi > div > div > a {
                 margin-bottom: 20px;
             }
-            .navigasi > div > aside > div {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                border:1px solid black;
-                /* height: 100%; */
+            .navigasi > div > div:nth-child(3) > input {
+                width: 50px;
+                height: 50px;
+                opacity: .5;
+                position: absolute;
+                cursor: pointer;
             }
-            .navigasi > div > aside {
-                display: block;
-                position: fixed;
-                overflow: auto;
-                width: 100%;
-                padding: 100px 10px;
-                height: 100vh;
-                outline: 0px;
-                background-color: #efe9da;
-                z-index: 9;
-                transform: translateX(0vw);
+            .navigasi > div > div:nth-child(3) > input:hover ~ div:nth-child(4) {
+                width: 100%;   
+                opacity: 1;
+            }
+            .navigasi > div > div:nth-child(3) > input:hover ~ div:nth-child(3) {
+                width: 50%;   
+                opacity: 1;
             }
             
         }
     </style>
 </head>
 <body style="background: #efe9da;">
-    <div id="wrapper" class="border border-dark">
-        <div class="">
+    <div id="wrapper">
+        <div>
             <!-- header -->
-            <div class="navigasi w-100">
+            <div class="navigasi w-100 position-fixed">
                 <div>    
                     <a href="">MAS</a>
-                    <div>
+                    <div id="navigasimenu">   
                         <a href="index.html">Home</a>
                         <a href="about.html">About</a>
                         <a href="portofolio.html">Portofolio</a>
                         <a href="contact.html">Contact</a>
                         <a href="contact.html" class="py-2 px-3 rounded-2" style="border:3px solid #393838">Resume</a>
+                        
                     </div>
-                    <div class="position-relative border border-dark" style="z-index: 99;">
-                        <input type="checkbox" name="" id="">
+                    <div class="position-relative">
+                        <input id="menu" type="checkbox" onclick="menu()" name="" id="">
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
-                    <aside>
-                        <div style="height: 400px;">
-                            <a href="index.html">Home</a>
-                            <a href="about.html">About</a>
-                            <a href="portofolio.html">Portofolio</a>
-                            <a href="contact.html">Contact</a>
-                            <a href="contact.html" class="py-2 px-3 rounded-2" style="border:3px solid #393838">Resume</a>
-                        </div>
-                    </aside>
                 </div>
             </div>
             
             <!-- Content - Contact -->
-            <div class="content-about mt-5">
+            <div class="content-about">
                 <div class="content-about-title">
                     <h2 style="color: #7b7474;">ABOUT <span>MAS</span></h2>
                 </div>
@@ -351,5 +199,14 @@
             <p>Designed & Built by Muhammad Alwie Sangajie</p>
         </footer>
     </div>
+    <script>
+        function menu(){
+            if(document.getElementById('menu').checked){
+                document.getElementById('navigasimenu').style.left= "100%";
+            } else {
+                document.getElementById('navigasimenu').style.left= "0";
+            }
+        }
+    </script>
 </body>
 </html>

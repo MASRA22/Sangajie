@@ -1,0 +1,9 @@
+/* Footer */
+footer{
+    margin-top: 20px;
+}
+footer > p{
+    padding: 10px;
+    text-align: center;
+    font-family: 'Concert One', cursive;
+}
