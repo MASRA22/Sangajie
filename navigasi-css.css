@@ -6,6 +6,10 @@
     transition: .5s;
     background: #efe9da;
 }
+.active{
+    color:#393838;
+    border-bottom: 2px dashed #393838;
+}
 .navigasi > div {
     display: flex;
     justify-content: space-between;
