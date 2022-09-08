@@ -23,7 +23,6 @@
         /* font-family: 'Concert One', cursive;
         font-family: 'DynaPuff', cursive; */
         * {
-            color:#393838;
             padding: 0;
             margin: 0;
         }
@@ -31,10 +30,20 @@
             transition: .5s;
             max-width: 1600px;
             /* height: 100vh; */
-            padding: 150px;
+            padding: 180px;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        #wrapper > div > div a{
+            background-color: #393838;
+            color:#efe9da;
+            box-shadow: 10px 10px 5px #7c7c74;
+        }
+        #wrapper > div > div a:hover{
+            background-color: #7c7c74;
+            color:#efe9da;
+            box-shadow: 10px 10px 5px #393838;
         }
         /* scroll */
         /* width */
@@ -63,12 +72,12 @@
         }
         @media only screen and (max-width: 1080px) {
             #wrapper{
-                padding: 150px 50px;
+                padding: 180px 50px;
             }
         }
         @media only screen and (max-width: 768px) {
             #wrapper{
-                padding: 150px 30px ;
+                padding: 180px 30px ;
             }
         }
     </style>
@@ -100,9 +109,9 @@
             <p  class="mb-4" style="font-size: 30px;">What’s Next?</p>
             <h3 class="mb-3" style="font-size: 60px;">Get In Touch</h3>
             <p class="mb-5" style="font-size: 20px;">I’m currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
-            <div class="d-flex border border-dark justify-content-around flex-wrap">
-                <a class="px-5 py-3 rounded-3 mb-4" style=" background-color: #393838;color:#efe9da;box-shadow: 10px 10px 5px #7c7c74;" href="mailto:muuhammadalwiesangajie22@gmail.com"><i class="fa-solid fa-envelope" style="color:#efe9da; width: 30px"></i>Say Hello</a>
-                <a class="px-5 py-3 rounded-3 mb-4 ms-sm-4" style=" background-color: #393838;color:#efe9da;box-shadow: 10px 10px 5px #7c7c74;" href="https://api.whatsapp.com/send?phone=+6285717507944&text=Halo, Muhammad Alwie Sangajie" target="_blank"><i class="fa-brands fa-whatsapp" style="color:#efe9da; width: 30px"></i>Say Hello</a>
+            <div class="d-flex justify-content-around flex-wrap">
+                <a class="px-5 py-3 rounded-3 mb-4" href="mailto:muuhammadalwiesangajie22@gmail.com"><i class="fa-solid fa-envelope" style="color:#efe9da; width: 30px"></i>Say Hello</a>
+                <a class="px-5 py-3 rounded-3 mb-4 ms-sm-4" href="https://api.whatsapp.com/send?phone=+6285717507944&text=Halo, Muhammad Alwie Sangajie" target="_blank"><i class="fa-brands fa-whatsapp" style="color:#efe9da; width: 30px"></i>Say Hello</a>
             </div>
         </div>
     </div>
