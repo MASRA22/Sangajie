@@ -3,6 +3,7 @@ footer{
     margin-top: 20px;
 }
 footer > p{
+    opacity: .5;
     padding: 10px;
     text-align: center;
     font-family: 'Concert One', cursive;
