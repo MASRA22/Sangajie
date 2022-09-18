@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About-MAS</title>
+    <title>Portofolio-MAS</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="about-css.css">
     <link rel="stylesheet" href="footer-css.css">
@@ -13,10 +13,10 @@
     <style>
         /* warna
         #efe9da
-        #393838
         #97938a
         #7c7c74
         #7b7474
+        #393838
         */
         
         @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff&display=swap'); 
@@ -27,6 +27,7 @@
             margin: 0;
         }
         #wrapper{
+            /* color: #393838; */
             transition: .5s;
             max-width: 1600px;
             padding: 130px;
@@ -77,8 +78,8 @@
             <a href="">MAS</a>
             <div id="navigasimenu" class="navigasimenu">   
                 <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
-                <a href="portofolio.html">Portofolio</a>
+                <a href="about.html">About</a>
+                <a href="portofolio.html" class="active">Portofolio</a>
                 <a href="contact.html">Contact</a>
                 <a href="CV-MuhammadAlwieSangajie.pdf" class="py-2 px-3 rounded-2" style="border:3px solid #393838">Resume</a>
                 
@@ -91,37 +92,20 @@
             </div>
         </div>
     </div>
-    <div id="wrapper">
+    <div id="wrapper" class="">
         <!-- Content - Contact -->
-        <div class="content-about">
-            <div class="content-about-title">
-                <h2 style="color: #7b7474;">ABOUT <span>MAS</span></h2>
+        <div class="w-100 d-flex justify-content-center flex-column" style="color: #7b7474;">
+            <div class="content-about-title mb-5">
+                <h2>Some Things <span>I’ve Built</span></h2>
             </div>
-            <div class="content-about-body mt-4 py-3">
-                <div class="about-img me-2 position-relative rounded-3">
-                    <img id="foto-mas" src="foto-mas.jpeg" class="rounded-3 position-relative" alt="">
-                </div>
-                <div class="d-flex flex-column justify-content-between">
-                    <div>
-                        <h2>MUHAMMAD ALWIE SANGAJIE</h2>
-                        <p class="fs-3 pb-3">I'M Web Developer</p>
-                        <p class="fs-5">I enjoy being a website developer. My interest in the website I got when I was in college I got the opportunity from the head of the study program to build a website to collect information data from graduates of the faculty of computer science.</p>
-                        <p class="fs-5">Here are a few technologies I’ve been working with recently:</p>
-                        <div class="d-flex justify-content-around" style="color: #7b7474;">
-                            <ul>
-                                <li>HTML & CSS</li>
-                                <li>PHP</li>
-                                <li>Javascript</li>
-                            </ul>
-                            <ul>
-                                <li>Codeigniter</li>
-                                <li>React JS</li>
-                                <li>GIT</li>
-                            </ul>
-                        </div>
+            <div class="d-flex justify-content-around">
+                <div class="col-5 text-center me-3" style="font-family: 'Concert One', cursive;">
+                    <a class="" href="">
+                        <img class="mb-3" src="Project-TracersStudy.png" width="100%" style="object-fit: contain;" alt="">
+                        <h3><b>~TRACER STUDY~</b></h3>
+                        <b class="fs-5">Web Development</b>
+                    </a>
                     </div>
-                    <a id="contact" class="rounded-3 text-center" href="contact.html">Get In Touch</a> 
-                </div>
             </div>
         </div>
     </div>
